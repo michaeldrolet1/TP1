@@ -39,13 +39,22 @@ int main()
     //   afficher les attributs de cet objet Produit
  
 	 p3.modifierNom("drill 12V");
+	 p3.modifierPrix(139.99);
 	 p3.afficher();
 	//3-  Creez un objet du classe rayon à l'aide du constructeur par défaut
+	Rayon r1();
    
 	//4-  Modifiez la catégorie  du rayon
+	r1.modifierCategorie("Materiel de construction");
    
     // 5- Ajouter 6 produits de  voret chaoix dans le rayon créé
-    
+	
+    	r1.ajouterProduit(p7);
+	r1.ajouterProduit(p8);
+	r1.ajouterProduit(p9);
+	r1.ajouterProduit(p13);
+	r1.ajouterProduit(p14);
+	r1.ajouterProduit(p15);
 
     // 6- afficher le contenu du rayon
    
