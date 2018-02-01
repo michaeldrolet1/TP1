@@ -38,7 +38,8 @@ int main()
 	//2-  Modifiez le nom, la référence, le prix de  troisieme objet Produit créé
     //   afficher les attributs de cet objet Produit
  
-	
+	 p3.modifierNom("drill 12V");
+	 p3.afficher();
 	//3-  Creez un objet du classe rayon à l'aide du constructeur par défaut
    
 	//4-  Modifiez la catégorie  du rayon
