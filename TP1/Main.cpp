@@ -30,13 +30,11 @@ int main()
 	Produit p10("peinture rouge",10 29.99);
 	Produit p11("peinture noire", 11 30.99);
 	Produit p12("peinture blanche", 12, 25.99);
-	Produit p13lanche de bouleau", 13, 10.99);
-	Produit p14anche de pin",14, 10.99);
-	Produit p15anche d'erable", 15, 10.99);
+	Produit p13("planche de bouleau", 13, 10.99);
+	Produit p14("planche de pin",14, 10.99);
+	Produit p15("planche d'erable", 15, 10.99);
 
-
-    
-    
+  
 	//2-  Modifiez le nom, la référence, le prix de  troisieme objet Produit créé
     //   afficher les attributs de cet objet Produit
  
