@@ -57,12 +57,19 @@ int main()
 	r1.ajouterProduit(p15);
 
     // 6- afficher le contenu du rayon
+	r1.afficher();
    
   
 	//7-  Creez un objet de classe client à l'aide du constructeur
-   
+   	Client client1("Haddad","Patrick",69,"H7H 1C5",19460614);
 
 	//8-  afficher l'etat des attributs du client
+	cout<<"Information sur le client"<<endl;
+	cout<< "--------------------------" << endl;
+	cout<<"Prenom et nom: "<<client.obtenirPrenom()<< "\b" <<client.obtenirNom() <<endl;
+	cout << "Identifiant:" << client.obtenirIdentifiant()<< endl;
+	cout << "Code Postal: "<< client.obtenirCodePostal() << endl;
+	cout << "Date de naissance: " << client.obtenirDateNaissance()<< endl;
    
 
 	//9-   Le client achete 9 produits
