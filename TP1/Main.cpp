@@ -73,7 +73,12 @@ int main()
    
 
 	//9-   Le client achete 9 produits
-   
+   	client.acheter(p7);
+	client.acheter(p8);
+	client.acheter(p9);
+	client.acheter(p13);
+	client.acheter(p14);
+	client.acheter(p15);
 
 	//10- Afficher le contenu du panier du client
 
