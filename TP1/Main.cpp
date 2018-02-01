@@ -18,46 +18,46 @@ int main()
 	//C'est à vous de voir si vous devez allouer dynamiquement ou non les élèments
 
 	//1-  Creez 15 objets du classe produit
-	Produit p1("marteau", 1, 5.49);
-	Produit p2("tourne-vis", 2, 3.19);
-	Produit p3("perceuse", 3, 119.99);
-	Produit p4("pinceau", 4, 2.99);
-	Produit p5("rouleau de peinture", 5, 0.99);
-	Produit p6("perche de peinture", 6.20);
-	Produit p7("clou", 7, 2.99);
-	Produit p8("vis", 8, 3.99);
-	Produit p9("ecrou", 9, 1.99);
-	Produit p10("peinture rouge",10 29.99);
-	Produit p11("peinture noire", 11 30.99);
-	Produit p12("peinture blanche", 12, 25.99);
-	Produit p13("planche de bouleau", 13, 10.99);
-	Produit p14("planche de pin",14, 10.99);
-	Produit p15("planche d'erable", 15, 10.99);
+	Produit produit1("marteau", 1, 5.49);
+	Produit produit2("tourne-vis", 2, 3.19);
+	Produit produit3("perceuse", 3, 119.99);
+	Produit produit4("pinceau", 4, 2.99);
+	Produit produit5("rouleau de peinture", 5, 0.99);
+	Produit produit6("perche de peinture", 6.20);
+	Produit produit7("clou", 7, 2.99);
+	Produit produit8("vis", 8, 3.99);
+	Produit produit9("ecrou", 9, 1.99);
+	Produit produit10("peinture rouge",10 29.99);
+	Produit produit11("peinture noire", 11 30.99);
+	Produit produit12("peinture blanche", 12, 25.99);
+	Produit produit13("planche de bouleau", 13, 10.99);
+	Produit produit14("planche de pin",14, 10.99);
+	Produit produit15("planche d'erable", 15, 10.99);
 
   
 	//2-  Modifiez le nom, la référence, le prix de  troisieme objet Produit créé
     //   afficher les attributs de cet objet Produit
  
-	 p3.modifierNom("drill 12V");
-	 p3.modifierPrix(139.99);
-	 p3.afficher();
+	 produit3.modifierNom("drill 12V");
+	 produit3.modifierPrix(139.99);
+	 produit3.afficher();
 	//3-  Creez un objet du classe rayon à l'aide du constructeur par défaut
-	Rayon r1();
+	Rayon rayon1();
    
 	//4-  Modifiez la catégorie  du rayon
-	r1.modifierCategorie("Materiel de construction");
+	rayon1.modifierCategorie("Materiel de construction");
    
     // 5- Ajouter 6 produits de  voret chaoix dans le rayon créé
 	
-    	r1.ajouterProduit(p7);
-	r1.ajouterProduit(p8);
-	r1.ajouterProduit(p9);
-	r1.ajouterProduit(p13);
-	r1.ajouterProduit(p14);
-	r1.ajouterProduit(p15);
+    	rayon1.ajouterProduit(produit7);
+	rayon1.ajouterProduit(produit8);
+	rayon1.ajouterProduit(produit9);
+	rayon1.ajouterProduit(produit13);
+	rayon1.ajouterProduit(produit14);
+	rayon1.ajouterProduit(produit15);
 
     // 6- afficher le contenu du rayon
-	r1.afficher();
+	rayon1.afficher();
    
   
 	//7-  Creez un objet de classe client à l'aide du constructeur
@@ -79,13 +79,18 @@ int main()
 	client.acheter(p13);
 	client.acheter(p14);
 	client.acheter(p15);
+	client.acheter(p1);
+	client.acheter(p2);
+	client.acheter(p3);
 
 	//10- Afficher le contenu du panier du client
+	client.afficherPanier();
 
      //11- livrer le panier du client
-   
+   	client.livrerPanier();
     
 	//12- afficher le contenu du panier du client
+	client.afficherPanier();
     
 	//13-  terminer le programme correctement
     
