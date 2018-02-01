@@ -42,46 +42,45 @@ int main()
 	 produit3.modifierPrix(139.99);
 	 produit3.afficher();
 	//3-  Creez un objet du classe rayon à l'aide du constructeur par défaut
-	Rayon rayon1();
+	Rayon rayon1 = Rayon();
    
 	//4-  Modifiez la catégorie  du rayon
 	rayon1.modifierCategorie("Materiel de construction");
    
     // 5- Ajouter 6 produits de  voret chaoix dans le rayon créé
 	
-    	rayon1.ajouterProduit(produit7);
-	rayon1.ajouterProduit(produit8);
-	rayon1.ajouterProduit(produit9);
-	rayon1.ajouterProduit(produit13);
-	rayon1.ajouterProduit(produit14);
-	rayon1.ajouterProduit(produit15);
+    	rayon1.ajouterProduit(&produit7);
+	rayon1.ajouterProduit(&produit8);
+	rayon1.ajouterProduit(&produit9);
+	rayon1.ajouterProduit(&produit13);
+	rayon1.ajouterProduit(&produit14);
+	rayon1.ajouterProduit(&produit15);
 
     // 6- afficher le contenu du rayon
 	rayon1.afficher();
    
   
 	//7-  Creez un objet de classe client à l'aide du constructeur
-   	Client client1("Haddad","Patrick",69,"H7H 1C5",19460614);
+   	Client client("Haddad","Patrick",69,"H7H 1C5",19460614);
 
 	//8-  afficher l'etat des attributs du client
 	cout<<"Information sur le client"<<endl;
 	cout<< "--------------------------" << endl;
-	cout<<"Prenom et nom: "<<client.obtenirPrenom()<< "\b" <<client.obtenirNom() <<endl;
+	cout<<"Prenom et nom: "<< client.obtenirPrenom()<< "\b" <<client.obtenirNom() <<endl;
 	cout << "Identifiant:" << client.obtenirIdentifiant()<< endl;
 	cout << "Code Postal: "<< client.obtenirCodePostal() << endl;
 	cout << "Date de naissance: " << client.obtenirDateNaissance()<< endl;
    
 
 	//9-   Le client achete 9 produits
-   	client.acheter(produit7);
-	client.acheter(produit8);
-	client.acheter(produit9);
-	client.acheter(produit13);
-	client.acheter(produit14);
-	client.acheter(produit15);
-	client.acheter(produit1);
-	client.acheter(produit2);
-	client.acheter(produit3);
+   	client.acheter(&produit7);
+	client.acheter(&produit9);
+	client.acheter(&produit13);
+	client.acheter(&produit14);
+	client.acheter(&produit15);
+	client.acheter(&produit1);
+	client.acheter(&produit2);
+	client.acheter(&produit3);
 
 	//10- Afficher le contenu du panier du client
 	client.afficherPanier();
@@ -93,6 +92,23 @@ int main()
 	client.afficherPanier();
     
 	//13-  terminer le programme correctement
+	client.~Client();
+	produit1.~Produit();
+	produit2.~Produit();
+	produit3.~Produit();
+	produit4.~Produit();
+	produit5.~Produit();
+	produit6.~Produit();
+	produit7.~Produit();
+	produit8.~Produit();
+	produit9.~Produit();
+	produit10.~Produit();
+	produit11.~Produit();
+	produit12.~Produit();
+	produit13.~Produit();
+	produit14.~Produit();
+	produit15.~Produit();
+	rayon1.~Rayon();
     
     return 0;
 }

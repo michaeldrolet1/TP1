@@ -16,6 +16,9 @@ Client::Client(string nom, string prenom, int identifiant, string codePostal, lo
 {
 
 }
+Client::~Client()
+{
+}
 
 string Client::obtenirNom() const
 {

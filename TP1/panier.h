@@ -14,6 +14,8 @@ class Panier
 public:
 	// Constructeur
     Panier (int capacite);
+	//Destructeur
+	~Panier();
     // methodes d'accès
     Produit **  obtenirContenuPanier() const;
     int obtenirNombreContenu() const ;

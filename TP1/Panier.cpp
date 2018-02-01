@@ -8,6 +8,9 @@ Panier::Panier(int capacite):capaciteContenu_(capacite)
 	totalAPayer_ = 0;
 	nombreContenu_ = 0;
 }
+Panier::~Panier()
+{
+}
 Produit** Panier::obtenirContenuPanier() const 
 {
 	return contenuPanier_;
@@ -25,19 +28,11 @@ double Panier::obtenirTotalApayer() const
 
 void Panier::ajouter(Produit * prod)
 {
+	nombreContenu_++;
 	if (nombreContenu_ > capaciteContenu_)
 	{
 		
-		/*if (capaciteContenu_ > 0)
-		{
-			int newCapacite = capaciteContenu_ * 2;
-		}
-		else
-		{
-			int newCapacite = 0;
-		}
-		*/
-		int newCapacite = (capaciteContenu_ > 0) ? capaciteContenu_ * 2 : 10;
+		int newCapacite = (capaciteContenu_ > 0) ? capaciteContenu_ * 2 : 1;
 		Produit** newContenu = new Produit*[newCapacite];
 		// Copie les produits deja present
 		for (int i = 0; i < nombreContenu_; i++)
@@ -52,6 +47,17 @@ void Panier::ajouter(Produit * prod)
 	}
 	// Ajouter le nouveau produit
 	contenuPanier_[nombreContenu_++] = prod;
+
+	//Mise a jour du total a payer
+	int newSomme = totalAPayer_;
+	for (int i = 0; i < nombreContenu_; i++)
+	{
+		newSomme += contenuPanier_[i]->obtenirPrix;
+
+		
+	}
+
+	totalAPayer_ = newSomme;
 }
 
 void Panier::livrer() 
@@ -62,7 +68,7 @@ void Panier::livrer()
 
 void Panier::afficher() const
 {
-	cout << obtenirContenuPanier() << endl;
-	cout << obtenirNombreContenu() << endl;
-	cout << obtenirTotalApayer() << endl;
+	cout <<"Contenu du panier: "<< obtenirContenuPanier() << endl;
+	cout << "Nombre de produits dans le panier: " << obtenirNombreContenu() << endl;
+	cout << "Total a payer " << obtenirTotalApayer() << endl;
 }

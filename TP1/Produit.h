@@ -17,6 +17,8 @@ public:
 	// Constructeurs par defaut et par parametres
 	Produit();
 	Produit(string nom, int reference, double prix);
+	// Destructeur par default
+	~Produit();
 
 	// Methodes d'acces
 	string obtenirNom() const;
