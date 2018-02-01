@@ -11,6 +11,10 @@ Produit::Produit()
 	double prix = 0;
 }
 
+Produit::~Produit()
+{ //Destructeur par default
+}
+
 Produit::Produit(string nom, int reference, double prix):nom_(nom),reference_(reference),prix_(prix) 
 { // Constructeur par attributs
 	
