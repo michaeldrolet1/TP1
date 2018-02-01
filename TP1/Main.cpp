@@ -18,21 +18,21 @@ int main()
 	//C'est à vous de voir si vous devez allouer dynamiquement ou non les élèments
 
 	//1-  Creez 15 objets du classe produit
-	Produit("marteau", 0, 5.49);
-	Produit("tourne-vis", 1, 3.19);
-	Produit("perceuse", 2, 119.99);
-	Produit("pinceau", 3, 2.99);
-	Produit("rouleau de peinture", 4, 0.99);
-	Produit("perche de peinture", 5.20);
-	Produit("clou", 6, 2.99);
-	Produit("vis", 7, 3.99);
-	Produit("ecrou", 8, 1.99);
-	Produit("peinture rouge",9, 29.99);
-	Produit("peinture noire", 10, 30.99);
-	Produit("peinture blanche", 11, 25.99);
-	Produit("planche de bouleau", 12, 10.99);
-	Produit("planche de pin",13, 10.99);
-	Produit("planche d'erable", 14, 10.99);
+	Produit p1("marteau", 1, 5.49);
+	Produit p2("tourne-vis", 2, 3.19);
+	Produit p3("perceuse", 3, 119.99);
+	Produit p4("pinceau", 4, 2.99);
+	Produit p5("rouleau de peinture", 5, 0.99);
+	Produit p6("perche de peinture", 6.20);
+	Produit p7("clou", 7, 2.99);
+	Produit p8("vis", 8, 3.99);
+	Produit p9("ecrou", 9, 1.99);
+	Produit p10("peinture rouge",10 29.99);
+	Produit p11("peinture noire", 11 30.99);
+	Produit p12("peinture blanche", 12, 25.99);
+	Produit p13lanche de bouleau", 13, 10.99);
+	Produit p14anche de pin",14, 10.99);
+	Produit p15anche d'erable", 15, 10.99);
 
 
     
