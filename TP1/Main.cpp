@@ -23,12 +23,12 @@ int main()
 	Produit produit3("perceuse", 3, 119.99);
 	Produit produit4("pinceau", 4, 2.99);
 	Produit produit5("rouleau de peinture", 5, 0.99);
-	Produit produit6("perche de peinture", 6.20);
+	Produit produit6("perche de peinture", 6,5.20);
 	Produit produit7("clou", 7, 2.99);
 	Produit produit8("vis", 8, 3.99);
 	Produit produit9("ecrou", 9, 1.99);
-	Produit produit10("peinture rouge",10 29.99);
-	Produit produit11("peinture noire", 11 30.99);
+	Produit produit10("peinture rouge",10, 29.99);
+	Produit produit11("peinture noire", 11 ,30.99);
 	Produit produit12("peinture blanche", 12, 25.99);
 	Produit produit13("planche de bouleau", 13, 10.99);
 	Produit produit14("planche de pin",14, 10.99);
@@ -73,15 +73,15 @@ int main()
    
 
 	//9-   Le client achete 9 produits
-   	client.acheter(p7);
-	client.acheter(p8);
-	client.acheter(p9);
-	client.acheter(p13);
-	client.acheter(p14);
-	client.acheter(p15);
-	client.acheter(p1);
-	client.acheter(p2);
-	client.acheter(p3);
+   	client.acheter(produit7);
+	client.acheter(produit8);
+	client.acheter(produit9);
+	client.acheter(produit13);
+	client.acheter(produit14);
+	client.acheter(produit15);
+	client.acheter(produit1);
+	client.acheter(produit2);
+	client.acheter(produit3);
 
 	//10- Afficher le contenu du panier du client
 	client.afficherPanier();
