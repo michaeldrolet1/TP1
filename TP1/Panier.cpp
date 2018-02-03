@@ -28,8 +28,8 @@ double Panier::obtenirTotalApayer() const
 
 void Panier::ajouter(Produit * prod)
 {
-	nombreContenu_++;
-	if (nombreContenu_ > capaciteContenu_)
+	
+	if (nombreContenu_ >= capaciteContenu_)
 	{
 		
 		int newCapacite = (capaciteContenu_ > 0) ? capaciteContenu_ * 2 : 1;
@@ -52,7 +52,8 @@ void Panier::ajouter(Produit * prod)
 	int newSomme = totalAPayer_;
 	for (int i = 0; i < nombreContenu_; i++)
 	{
-		newSomme += contenuPanier_[i]->obtenirPrix;
+		//newSomme += contenuPanier_[i]->obtenirPrix;
+		newSomme += prod->obtenirPrix;
 
 		
 	}
