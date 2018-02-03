@@ -93,21 +93,6 @@ int main()
     
 	//13-  terminer le programme correctement
 	client.~Client();
-	produit1.~Produit();
-	produit2.~Produit();
-	produit3.~Produit();
-	produit4.~Produit();
-	produit5.~Produit();
-	produit6.~Produit();
-	produit7.~Produit();
-	produit8.~Produit();
-	produit9.~Produit();
-	produit10.~Produit();
-	produit11.~Produit();
-	produit12.~Produit();
-	produit13.~Produit();
-	produit14.~Produit();
-	produit15.~Produit();
 	rayon1.~Rayon();
     
     return 0;

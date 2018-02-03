@@ -32,28 +32,28 @@ void Panier::ajouter(Produit * prod)
 	if (nombreContenu_ >= capaciteContenu_)
 	{
 		
-		int newCapacite = (capaciteContenu_ > 0) ? capaciteContenu_ * 2 : 1;
-		Produit** newContenu = new Produit*[newCapacite];
+		int nouveauCapacite = (capaciteContenu_ > 0) ? capaciteContenu_ * 2 : 1;
+		Produit** nouveauContenu = new Produit*[nouveauCapacite];
 		// Copie les produits deja present
 		for (int i = 0; i < nombreContenu_; i++)
-			newContenu[i] = contenuPanier_[i];
+			nouveauContenu[i] = contenuPanier_[i];
 
 		// Supprime le contenu precedent
 		delete[] contenuPanier_;
 
 		// Assigne les nouveaux contenus
-		contenuPanier_ = newContenu;
-		capaciteContenu_ = newCapacite;
+		contenuPanier_ = nouveauContenu;
+		capaciteContenu_ = nouveauCapacite;
 	}
 	// Ajouter le nouveau produit
 	contenuPanier_[nombreContenu_++] = prod;
 
 	//Mise a jour du total a payer
-	int newSomme = totalAPayer_;
+	int nouveauSomme = totalAPayer_;
 	for (int i = 0; i < nombreContenu_; i++)
 	{
 		//newSomme += contenuPanier_[i]->obtenirPrix;
-		newSomme += prod->obtenirPrix;
+		nouveauSomme += prod->obtenirPrix;
 
 		
 	}
