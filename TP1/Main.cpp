@@ -86,7 +86,7 @@ int main()
 
 	//10- Afficher le contenu du panier du client
 	client.afficherPanier();
-
+	cout << "________________________________________________________________________" << endl << endl;
      //11- livrer le panier du client
    	client.livrerPanier();
     

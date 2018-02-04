@@ -52,7 +52,7 @@ void Panier::ajouter(Produit * prod)
 	double nouveauSomme = totalAPayer_;
 	for (int i = 0; i < nombreContenu_; i++)
 	{
-		//newSomme += contenuPanier_[i]->obtenirPrix;
+		
 		nouveauSomme += prod->obtenirPrix();
 
 		
@@ -63,6 +63,7 @@ void Panier::ajouter(Produit * prod)
 
 void Panier::livrer() 
 {
+	cout << "Livrage du panier" << endl;
 	if (contenuPanier_ != nullptr)
 	{
 		delete[] contenuPanier_;
@@ -75,12 +76,12 @@ void Panier::afficher() const
 {
 	cout << "Contenu du panier: " << contenuPanier_ << endl;
 	cout << "Capacite du panier: " << capaciteContenu_ << endl;
-	cout << "Nombre de produits dans le panier: " << obtenirNombreContenu() << endl;
-	cout << "Total a payer " << obtenirTotalApayer() << endl;
-	for (int i = 0; i < nombreContenu_; i++)
+	cout << "Nombre de produits dans le panier: " << nombreContenu_ << endl;
+	cout << "Total a payer " << totalAPayer_ << endl;
+	/*for (int i = 0; i < nombreContenu_; i++)
 		{
 			contenuPanier_[i]->afficher();
-		}
+		}*/
 	
 	
 	
