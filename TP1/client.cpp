@@ -2,14 +2,6 @@
 #include <string>
 #include <iostream>
 
-//Client::Client()
-//{
-//	nom_ : "unknown";
-//	prenom_: "unknown";
-//	identifiant_ : 0;
-//	codePostal_: "unknown";
-//	dateNaissance_ : 0;
-//}
 
 Client::Client(string nom, string prenom, int identifiant, string codePostal, long date)
 	: nom_(nom), prenom_(prenom), identifiant_(identifiant), codePostal_(codePostal), dateNaissance_(date), monPanier_(nullptr)
@@ -60,4 +52,23 @@ void Client::modifierCodePostal(string codePostal)
 void Client::modifierDateNaissance(long date)
 {
 	dateNaissance_ = date;
+}
+void Client::acheter(Produit * prod)
+{
+	if (monPanier_ == nullptr)
+	{
+		monPanier_ = new Panier(4);
+	}
+	monPanier_->ajouter(prod);
+}
+void Client::afficherPanier()
+{
+	if (monPanier_ != nullptr)
+	{
+		monPanier_->afficher();
+	}
+}
+void Client::livrerPanier()
+{
+	monPanier_->livrer();
 }

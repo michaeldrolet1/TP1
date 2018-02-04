@@ -58,7 +58,7 @@ void Panier::ajouter(Produit * prod)
 		
 	}
 
-	totalAPayer_ = newSomme;
+	totalAPayer_ = nouveauSomme;
 }
 
 void Panier::livrer() 

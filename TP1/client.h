@@ -32,7 +32,7 @@ public:
     // autres méthodes
     void acheter (Produit * prod);
     void afficherPanier();
-    void livrerPanier();
+	void livrerPanier();
     
     
 private:

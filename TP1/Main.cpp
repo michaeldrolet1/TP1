@@ -49,7 +49,7 @@ int main()
    
     // 5- Ajouter 6 produits de  voret chaoix dans le rayon créé
 	
-    	rayon1.ajouterProduit(&produit7);
+    rayon1.ajouterProduit(&produit7);
 	rayon1.ajouterProduit(&produit8);
 	rayon1.ajouterProduit(&produit9);
 	rayon1.ajouterProduit(&produit13);
