@@ -23,7 +23,7 @@ public:
 	// Methodes d'acces
 	string obtenirNom() const;
 	int obtenirReference() const;
-	double obtenirPrix() const;
+	double obtenirPrix() const ;
 
 	// Methodes de modification
 	void modifierNom(string nom);

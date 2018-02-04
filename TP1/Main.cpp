@@ -38,9 +38,10 @@ int main()
 	//2-  Modifiez le nom, la référence, le prix de  troisieme objet Produit créé
     //   afficher les attributs de cet objet Produit
  
-	 produit3.modifierNom("drill 12V");
+	 produit3.modifierNom("Drill 12V");
 	 produit3.modifierPrix(139.99);
 	 produit3.afficher();
+	 cout << "________________________________________________________________________" << endl<<endl;
 	//3-  Creez un objet du classe rayon à l'aide du constructeur par défaut
 	Rayon rayon1 = Rayon();
    
@@ -58,19 +59,20 @@ int main()
 
     // 6- afficher le contenu du rayon
 	rayon1.afficher();
+	cout << "________________________________________________________________________" << endl << endl;
    
   
 	//7-  Creez un objet de classe client à l'aide du constructeur
-   	Client client("Haddad","Patrick",69,"H7H 1C5",19460614);
+   	Client client("Haddad","Patrick  ",69,"H7H 1C5",19460614);
 
 	//8-  afficher l'etat des attributs du client
 	cout<<"Information sur le client"<<endl;
-	cout<< "--------------------------" << endl;
+	cout << "------------------------------------------------------------------------" << endl;
 	cout<<"Prenom et nom: "<< client.obtenirPrenom()<< "\b" <<client.obtenirNom() <<endl;
 	cout << "Identifiant:" << client.obtenirIdentifiant()<< endl;
 	cout << "Code Postal: "<< client.obtenirCodePostal() << endl;
 	cout << "Date de naissance: " << client.obtenirDateNaissance()<< endl;
-   
+	cout << "________________________________________________________________________" << endl << endl;
 
 	//9-   Le client achete 9 produits
    	client.acheter(&produit7);
@@ -92,8 +94,7 @@ int main()
 	client.afficherPanier();
     
 	//13-  terminer le programme correctement
-	client.~Client();
-	rayon1.~Rayon();
+	std::getchar();
     
     return 0;
 }

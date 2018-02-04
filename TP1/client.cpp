@@ -67,6 +67,8 @@ void Client::afficherPanier()
 	{
 		monPanier_->afficher();
 	}
+	else
+		cout << "Le panier de " << prenom_ << nom_ << "est vide." << endl;
 }
 void Client::livrerPanier()
 {

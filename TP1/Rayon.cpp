@@ -36,7 +36,6 @@ void Rayon::modifierCategorie(string cat)
 }
 void Rayon::ajouterProduit(Produit * produit)
 {
-	cout << "Un objet est ajoute a l'objet rayon" << endl;
 
 	if (tousProduits_ == nullptr)
 	{
@@ -81,7 +80,12 @@ void Rayon::ajouterProduit(Produit * produit)
 }
 void Rayon::afficher() const
 {
-	cout << "La categorie du rayon est " << categorie_ << " La capacite du tableau dynamique de produit est " << capaciteProduits_ << " Le nombre de produit disponible est " << nombreProduits_;
+	cout << "|Categorie du rayon|             : " << categorie_ << endl;
+	cout << "|Capacite de produits|           : " << capaciteProduits_ << endl; 
+	cout << "|Nombre de produits disponibles| : " << nombreProduits_ << endl;
+	cout << "Contenu du rayon : " << endl;
+	cout << "------------------------------------------------------------------------" << endl;
+
 	for (int i = 0; i < nombreProduits_; i++) 
 	{
 		tousProduits_[i]->afficher();

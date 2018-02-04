@@ -30,7 +30,7 @@ int Produit::obtenirReference() const
 	return reference_;
 }
 
-double Produit::obtenirPrix() const 
+double Produit::obtenirPrix()  const
 {
 	return prix_;
 }
@@ -52,7 +52,7 @@ void Produit::modifierPrix(double prix)
 
 void Produit:: afficher() const
 {
-	cout << obtenirNom() << endl;
-	cout << obtenirReference() << endl;
-	cout << obtenirPrix() << endl;
+	cout << "|Produit|: "<< obtenirNom();
+	cout << ", |Reference|: " << obtenirReference();
+	cout << ", |Prix|: " << obtenirPrix()<< "$" << endl ;
 }
